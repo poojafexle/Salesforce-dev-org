@@ -1,0 +1,27 @@
+<!--
+    Purpose         :   Navigation Component
+    Created By      :   Pooja Hemrajani
+    Created Date    :   27/04/2022
+    Current Version :   V_1.0
+    Revision Log    :   V_1.0 Created - Pooja Hemrajani - 27/04/2022
+-->
+<template>
+    <!-- Navigate to a different standard page -->
+    <lightning-card title="NavToChatter" icon-name="custom:custom96">
+        <lightning-button
+            label="Go to Chatter"
+            class="slds-var-m-around_medium"
+            onclick={navigateToChatter}
+        ></lightning-button>
+    </lightning-card>
+    <!-- Navigate to an app in same org -->
+    <lightning-card title="NavToSales" icon-name="custom:custom96">
+        <lightning-button
+            label="Go to Sales"
+            class="slds-var-m-around_medium"
+            onclick={navigateToSales}
+        ></lightning-button>
+    </lightning-card>
+    <!-- Working with bool property -->
+    <c-bool></c-bool>
+</template>

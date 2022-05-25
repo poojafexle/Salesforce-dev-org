@@ -1,0 +1,17 @@
+div.LARGE {
+    background: red;
+    padding: 10px;
+    margin: 5px;
+}
+
+div.MEDIUM {
+    background: gold;
+    padding: 10px;
+    margin: 5px;
+}
+
+div.SMALL {
+    background: greenyellow;
+    padding: 10px;
+    margin: 5px;
+}

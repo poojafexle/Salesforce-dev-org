@@ -1,0 +1,38 @@
+<!--
+    Purpose         :   Calculator Component
+    Created By      :   Pooja Hemrajani
+    Created Date    :   22/04/2022
+    Current Version :   V_1.0
+    Revision Log    :   V_1.0 Created - Pooja Hemrajani - 22/04/2022
+-->
+<template>
+    <lightning-card>
+
+        <div class="slds-m-left_medium slds-m-right_medium">
+            <!-- With an icon -->
+            <div class="slds-grid">
+                <lightning-icon slot="media" icon-name="standard:number_input"></lightning-icon>
+                <h3 class="slds-m-top_x-small slds-m-left_medium">Simple Calculator LWC</h3>
+            </div>
+
+            <!-- Default/basic inputs -->
+            <div>
+                <lightning-input required type="number" pattern=[0-9] class="custom-css slds-m-top_x-small" name="num1" onchange={handleChangeNum} label="First Number"></lightning-input>
+                <lightning-input required type="number" pattern=[0-9] class="custom-css slds-m-top_x-small" name="num2" onchange={handleChangeNum} label="Second Number"></lightning-input>
+            </div>
+
+            <!-- Default/basic buttons -->
+            <div class="slds-m-horizontal_xx-small slds-m-top_small slds-grid slds-gutters_direct">
+                <button class="slds-col slds-button slds-button_brand" value="+" onclick={calcFunc}>Add</button>
+                <button class="slds-col slds-button slds-button_brand" value="-" onclick={calcFunc}>Subtract</button>
+                <button class="slds-col slds-button slds-button_brand" value="*" onclick={calcFunc}>Multiply</button>
+                <button class="slds-col slds-button slds-button_brand" value="/" onclick={calcFunc}>Divide</button>
+            </div>
+
+            <div class="slds-m-top_x-small">
+                <lightning-input label="Result" class="input" name="result" read-only="true" value={result} ></lightning-input>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>

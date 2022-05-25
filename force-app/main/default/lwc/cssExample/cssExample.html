@@ -1,0 +1,24 @@
+<template>
+    <template if:true={accounts}>
+        <table class="tablecls">
+            <tr>
+                <th>
+                    <div title="Name">Name</div>
+                </th>
+                <th>
+                    <div title="Phone">Phone</div>
+                </th>
+            </tr>
+            <template for:each={accounts} for:item="acc">
+                <tr key={acc.Id}>
+                    <td data-label="Name">
+                        <div>{acc.Name}</div>
+                    </td>
+                    <td data-label="Rating">
+                        <div>{acc.Phone}</div>
+                    </td>
+                </tr>
+            </template>
+        </table>
+    </template>
+</template>

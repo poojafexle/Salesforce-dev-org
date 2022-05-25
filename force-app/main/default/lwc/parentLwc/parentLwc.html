@@ -1,0 +1,38 @@
+<!--
+    Purpose         :   Parent Component which will get value from child
+    Created By      :   Pooja Hemrajani
+    Created Date    :   26/04/2022
+    Current Version :   V_1.0
+    Revision Log    :   V_1.0 Created - Pooja Hemrajani - 26/04/2022
+-->
+<template>
+    <!-- For Child to parent -->
+    <lightning-card title="ChildToParentPropertyNew" icon-name="standard:product_consumed">
+        <div class="slds-p-horizontal_medium">
+            <c-child-lwc onprogressvaluechange={hanldeProgressValueChange}></c-child-lwc>
+            <lightning-input
+                label="Number"
+                type="number"
+                value={number}
+                disabled
+            ></lightning-input>
+        </div>
+    </lightning-card>
+    <!-- For Parent to child -->
+    <lightning-card class="slds-p-top_small" title="ParentToChildPropertyNew" icon-name="standard:product_consumed">
+        <div class="slds-p-horizontal_medium">
+            <lightning-input
+                label="Number"
+                type="number"
+                min-length="1"
+                max-length="3"
+                value={percentage}
+                onchange={handlePercentageChange}
+            ></lightning-input>
+            <c-progress-bar
+                class="slds-show slds-is-relative"
+                percentage={percentage}
+            ></c-progress-bar>
+        </div>
+    </lightning-card>
+</template>

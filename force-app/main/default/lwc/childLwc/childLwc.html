@@ -1,0 +1,20 @@
+<!--
+    Purpose         :   Passing value from current component to parent component
+    Created By      :   Pooja Hemrajani
+    Created Date    :   26/04/2022
+    Current Version :   V_1.0
+    Revision Log    :   V_1.0 Created - Pooja Hemrajani - 26/04/2022
+-->
+<template>
+    <lightning-card>
+        <div>
+            <lightning-input
+                label="Number"
+                type="number"
+                min="0"
+                value={number}
+                onchange={handleNumberChange}
+            ></lightning-input>
+        </div>
+    </lightning-card>
+</template>
