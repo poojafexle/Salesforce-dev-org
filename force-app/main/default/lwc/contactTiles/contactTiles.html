@@ -1,0 +1,67 @@
+<!-- 
+    Purpose         :   Contact tiles Template
+    Created By      :   Pooja Hemrajani
+    Created Date    :   28/04/2022
+    Current Version :   V_1.0
+    Revision Log    :   V_1.0 Created - Pooja Hemrajani - 28/04/2022
+-->
+<!--<template>
+    <h1 style="font-size: large;">{type}</h1>
+    <lightning-layout multiple-rows>
+            <lightning-layout-item class="slds-p-right_x-small slds-p-bottom_small" for:each={contacts.data} for:item="contact" key={contact.Id} size={size}>
+                <lightning-card  title="Contact card">
+                    <div class="demo-only slds-p-left_xx-small">
+                        <article class="slds-tile slds-media">
+                            <div class="slds-media__figure">
+                                <span class="slds-avatar slds-avatar_circle slds-avatar_medium">
+                                    <img alt="" src={contact.PhotoUrl} title={contact.Name} />
+                                </span>
+                            </div>
+                            <div class="slds-media__body">
+                                <h3 class="slds-tile__title slds-truncate" title="Lexee L. Jackson">
+                                <a name={contact.Id} onclick={handleChange}>{contact.Name}</a>
+                                </h3>
+                                <div class="slds-tile__detail">
+                                    <dl class="slds-list_horizontal slds-wrap">
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate" key={contact.Id}>Name:</dt>
+                                        <dd class="slds-item_detail slds-truncate" key={contact.Id}>{contact.Name}</dd>
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate" key={contact.Id}>Email:</dt>
+                                        <dd class="slds-item_detail slds-truncate" key={contact.Id}>{contact.Email}</dd>
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate" key={contact.Id}>Phone:</dt>
+                                        <dd class="slds-item_detail slds-truncate" key={contact.Id}>{contact.Phone}</dd>
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate" key={contact.Id}>Title:</dt>
+                                        <dd class="slds-item_detail slds-truncate" key={contact.Id}>{contact.Title}</dd>
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate" key={contact.Id}>Department:</dt>
+                                        <dd class="slds-item_detail slds-truncate" key={contact.Id}>{contact.Department}</dd>
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate" key={contact.Id}>Birthdate:</dt>
+                                        <dd class="slds-item_detail slds-truncate" key={contact.Id}>{contact.Birthdate}</dd>
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate" key={contact.Id}>Photo:</dt>
+                                        <dd class="slds-item_detail slds-truncate" key={contact.Id}>{contact.PhotoUrl}</dd>
+                                        <lightning-button variant="neutral" name={contact.Id} onclick={handleChange} label="More info"></lightning-button>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </lightning-card>
+            </lightning-layout-item>
+    </lightning-layout>
+</template> -->
+<template>
+    <lightning-card  variant="Narrow"  title="My tile view" icon-name="standard:account">
+        <div class="slds-grid slds-wrap">
+            <template for:each={contacts.data} for:item="contact">
+                <div key={contact.Id} class={size} style="width: 425px;">
+                    <lightning-tile label="Details">
+                        <lightning-avatar slot="media" src="https://www.lightningdesignsystem.com/assets/images/avatar1.jpg" fallback-icon-name="standard:person_account" alternative-text="Bruce Wayne"></lightning-avatar>
+                        <ul class="slds-list_horizontal slds-has-dividers_right">
+                            <li class="slds-item">First Name -<b>{contact.Name}</b></li>
+                            <li class="slds-item">Last Name -<b>{contact.Name}</b></li>
+                        </ul>
+                        <lightning-button variant="brand" label="More info" title="more info" onclick={handleClick} value={contact.Id}></lightning-button>
+                    </lightning-tile>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,31 @@
+<!--
+    Purpose         :   invoking apex methods  and showing data on ui
+    Created By      :   Pooja Hemrajani
+    Created Date    :   26/04/2022
+    Current Version :   V_1.0
+    Revision Log    :   V_1.0 Created - Pooja Hemrajani - 26/04/2022
+-->
+<template>
+    <lightning-card  title="Promises Controller">
+        <div class="slds-m-around_medium">
+            <h3><b>Contacts</b></h3>
+            <template if:true={contacts}>
+                <template for:each={contacts} for:item="contact">
+                    <p key={contact.Id}>{contact.Name}</p>
+                </template>
+            </template>
+            <h3><b>Opportunity</b></h3>
+            <template if:true={opportunities}>
+                <template for:each={opportunities} for:item="opportunity">
+                    <p key={opportunity.Id}>{opportunity.Name}</p>
+                </template>
+            </template>
+            <h3><b>Cases</b></h3>
+            <template if:true={cases}>
+                <template for:each={cases} for:item="a">
+                    <p key={a.Id}>{a.CaseNumber}</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

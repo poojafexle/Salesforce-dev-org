@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>51.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>Progress Bar</masterLabel>
+	<description>Designing a progress bar to show your progress</description>
+	<targets>
+		<target>lightning__HomePage</target>
+	</targets>
+</LightningComponentBundle>

@@ -1,0 +1,22 @@
+<!-- 
+    Purpose         :   Migrate Design Attribute Template
+    Created By      :   Pooja Hemrajani
+    Created Date    :   02/05/2022
+    Current Version :   V_1.0
+    Revision Log    :   V_1.0 Created - Pooja Hemrajani - 02/05/2022
+-->
+<template>
+    <lightning-progress-indicator
+      current-step={currentStep}
+      type={type}
+      variant={variant}
+    >
+      <template for:each={steps} for:item="step">
+        <lightning-progress-step
+          label={step.label}
+          value={step.value}
+          key={step.label}
+        ></lightning-progress-step>
+      </template>
+    </lightning-progress-indicator>
+  </template>

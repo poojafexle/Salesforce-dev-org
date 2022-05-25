@@ -1,0 +1,15 @@
+<!--
+    Purpose         :   Child Component for progress bar which will get value from parent
+    Created By      :   Pooja Hemrajani
+    Created Date    :   26/04/2022
+    Current Version :   V_1.0
+    Revision Log    :   V_1.0 Created - Pooja Hemrajani - 26/04/2022
+-->
+<template>
+    <lightning-layout class="slds-m-top_x-small" vertical-align="center">
+        <lightning-layout-item class="slds-p-right-small"> {percentage}% </lightning-layout-item>
+        <lightning-layout-item flexibility="grow">
+            <lightning-progress-bar value={percentage} size="medium"></lightning-progress-bar>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
